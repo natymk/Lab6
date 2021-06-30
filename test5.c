@@ -39,6 +39,7 @@ delHighestPrior(lista);
 printList(lista);
 printHighestPrior(lista);
 deleteList(lista);
+free(lista);
 return 0;
 
 }//------END OF MAIN-----
@@ -88,6 +89,7 @@ void printList(t_list *list){
 //Función para escoger el nodo de mayor prioridad
 void delHighestPrior(t_list* list){
 if(list->head!=NULL){
+list->current=list->head;
 list->head= list->head->next;
 free(list->current);
 list->current=NULL;
