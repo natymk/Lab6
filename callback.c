@@ -165,8 +165,9 @@ int main()
   puts("People older than n:");
   // TODO: request user input
   int age;
-  printf("Inserte la edad con la que desea comparar\n");
+  printf("Inserte una cantidad de años\n");
   scanf("%i", &age);
+  printf("Usuarios que superan dicha cantidad de años:\n");
   puts("-------------------------------");
   n=0;
   apply(server,nusers,isolder,&age);
